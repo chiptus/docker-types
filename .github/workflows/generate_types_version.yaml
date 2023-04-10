@@ -1,0 +1,29 @@
+name: "generate-types-for-version"
+
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to generate types for"
+        required: true
+        
+jobs:
+  generate-types:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+          cache: 'yarn'
+      - run: yarn --frozen-lockfile
+      - run: yarn openapi-typescript https://docs.docker.com/engine/api/v${{ github.event.inputs.version }}.yaml --output ${{ github.event.inputs.version }}.d.ts 
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: generate types for docker v${{ github.event.inputs.version }}"
+          commit_options: "--signoff"
+          commit_user_name: "GitHub Actions"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_author: "GitHub Actions <github-actions[bot]@users.noreply.github.com>"
+          file_pattern: "types"
