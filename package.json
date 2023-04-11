@@ -4,7 +4,8 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "openapi-typescript": "5.4.1"
+    "openapi-typescript": "5.4.1",
+    "openapi-typescript-codegen": "^0.24.0"
   },
   "devDependencies": {},
   "type": "module"

@@ -20,7 +20,7 @@ jobs:
           node-version: '14'
           cache: 'yarn'
       - run: yarn --frozen-lockfile
-      - run: yarn openapi-typescript https://docs.docker.com/engine/api/v${{ github.event.inputs.version }}.yaml --output ${{ github.event.inputs.version }}.d.ts 
+      - run: ./generate-version-types.sh ${{ github.event.inputs.version }} 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "chore: generate types for docker v${{ github.event.inputs.version }}"
