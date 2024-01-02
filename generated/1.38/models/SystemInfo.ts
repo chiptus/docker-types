@@ -1,3 +1,4 @@
+/* generated using openapi-typescript-codegen -- do no edit */
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
@@ -275,7 +276,7 @@ export type SystemInfo = {
     /**
      * Version string of the daemon.
      *
-     * > **Note**: the [standalone Swarm API](/swarm/swarm-api/)
+     * > **Note**: the [standalone Swarm API](https://docs.docker.com/swarm/swarm-api/)
      * > returns the Swarm version instead of the daemon  version, for example
      * > `swarm/1.2.8`.
      *

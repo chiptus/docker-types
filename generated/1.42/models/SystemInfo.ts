@@ -1,3 +1,4 @@
+/* generated using openapi-typescript-codegen -- do no edit */
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
@@ -300,42 +301,8 @@ export type SystemInfo = {
     /**
      * Version string of the daemon.
      *
-     * > **Note**: the [standalone Swarm API](/swarm/swarm-api/)
-     * > returns the Swarm version instead of the daemon  version, for example
-     * > `swarm/1.2.8`.
-     *
      */
     ServerVersion?: string;
-    /**
-     * URL of the distributed storage backend.
-     *
-     *
-     * The storage backend is used for multihost networking (to store
-     * network and endpoint information) and by the node discovery mechanism.
-     *
-     * <p><br /></p>
-     *
-     * > **Deprecated**: This field is only propagated when using standalone Swarm
-     * > mode, and overlay networking using an external k/v store. Overlay
-     * > networks with Swarm mode enabled use the built-in raft store, and
-     * > this field will be empty.
-     *
-     */
-    ClusterStore?: string;
-    /**
-     * The network endpoint that the Engine advertises for the purpose of
-     * node discovery. ClusterAdvertise is a `host:port` combination on which
-     * the daemon is reachable by other hosts.
-     *
-     * <p><br /></p>
-     *
-     * > **Deprecated**: This field is only propagated when using standalone Swarm
-     * > mode, and overlay networking using an external k/v store. Overlay
-     * > networks with Swarm mode enabled use the built-in raft store, and
-     * > this field will be empty.
-     *
-     */
-    ClusterAdvertise?: string;
     /**
      * List of [OCI compliant](https://github.com/opencontainers/runtime-spec)
      * runtimes configured on the daemon. Keys hold the "name" used to
