@@ -1,12 +1,11 @@
 {
   "name": "docker-types",
-  "version": "1.42.1",
+  "version": "1.43.0",
   "license": "MIT",
   "private": false,
-  "dependencies": {
+  "devDependencies": {
     "openapi-typescript": "6.7.3",
     "openapi-typescript-codegen": "^0.25.0"
   },
-  "devDependencies": {},
   "type": "module"
 }
