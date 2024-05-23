@@ -222,7 +222,7 @@ export type SystemInfo = {
      * Go runtime (`GOOS`).
      *
      * Currently returned values are "linux" and "windows". A full list of
-     * possible values can be found in the [Go documentation](https://golang.org/doc/install/source#environment).
+     * possible values can be found in the [Go documentation](https://go.dev/doc/install/source#environment).
      *
      */
     OSType?: string;
@@ -230,7 +230,7 @@ export type SystemInfo = {
      * Hardware architecture of the host, as returned by the Go runtime
      * (`GOARCH`).
      *
-     * A full list of possible values can be found in the [Go documentation](https://golang.org/doc/install/source#environment).
+     * A full list of possible values can be found in the [Go documentation](https://go.dev/doc/install/source#environment).
      *
      */
     Architecture?: string;
