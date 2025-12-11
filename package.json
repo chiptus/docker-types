@@ -1,14 +1,32 @@
 {
   "name": "docker-types",
-  "version": "1.47.0",
+  "version": "1.47.1",
   "license": "MIT",
   "private": false,
+  "type": "module",
+  "types": "./index.ts",
+  "exports": {
+    ".": {
+      "types": "./index.ts"
+    },
+    "./generated/*": {
+      "types": "./generated/*/index.ts"
+    }
+  },
+  "files": [
+    "index.ts",
+    "generated/**/*.ts"
+  ],
+  "scripts": {
+    "generate:index": "node scripts/generate-root-index.js",
+    "prepublishOnly": "npm run generate:index"
+  },
   "repository": {
     "url": "https://github.com/chiptus/docker-types"
   },
   "devDependencies": {
     "openapi-typescript": "6.7.3",
-    "openapi-typescript-codegen": "^0.25.0"
-  },
-  "type": "module"
+    "openapi-typescript-codegen": "^0.25.0",
+    "typescript": "^5.9.3"
+  }
 }

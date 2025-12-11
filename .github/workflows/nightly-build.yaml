@@ -96,6 +96,10 @@ jobs:
         run: |
           npm version ${{ steps.version.outputs.version }} --no-git-tag-version
 
+      - name: Generate root index file
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: npm run generate:index
+
       - name: Commit and tag changes
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |

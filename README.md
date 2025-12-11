@@ -16,10 +16,32 @@ yarn add docker-types
 
 ## Usage
 
+### Import from Package Root (Recommended)
+
+Import types from the package root to automatically use the version you've installed:
+
+```typescript
+import type { Container, Image, ContainerSummary } from "docker-types";
+
+// The types automatically match your installed package version:
+// docker-types@1.48.0 → Docker API 1.48 types
+// docker-types@1.49.0 → Docker API 1.49 types
+```
+
+When you upgrade the `docker-types` package, your imports automatically receive the newer types without any code changes.
+
+### Import Specific Version
+
+You can still import specific Docker API versions explicitly if needed:
+
 ```typescript
 import type { Container, Image } from "docker-types/generated/1.45";
+import type { ContainerSummary } from "docker-types/generated/1.48";
 
-// Use the types in your Docker client code
+// Useful for:
+// - Supporting multiple Docker API versions
+// - Comparing type differences between versions
+// - Gradual migration between versions
 ```
 
 ## Available Versions

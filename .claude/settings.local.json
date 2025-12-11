@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(git -C /Users/work/portainer-org/docker-types log --oneline -15)",
+      "Bash(du:*)",
+      "Bash(done)",
+      "Bash(yarn add:*)",
+      "Bash(yarn generate:index)",
+      "Bash(yarn build)",
+      "Bash(ls:*)",
+      "Bash(find:*)"
+    ]
+  }
+}
