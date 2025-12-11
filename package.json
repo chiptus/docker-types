@@ -3,6 +3,9 @@
   "version": "1.45.0",
   "license": "MIT",
   "private": false,
+  "repository": {
+    "url": "https://github.com/chiptus/docker-types"
+  },
   "devDependencies": {
     "openapi-typescript": "6.7.3",
     "openapi-typescript-codegen": "^0.25.0"
