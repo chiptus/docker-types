@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
+      - name: Update npm
+        run: npm install -g npm@latest
+
       - name: Get current version and calculate next version
         id: version
         run: |
@@ -104,7 +107,7 @@ jobs:
 
       - name: Publish to npm
         if: steps.check_changes.outputs.has_changes == 'true'
-        run: npm publish --provenance --access public
+        run: npm publish --access public
 
       - name: Push changes and tags
         if: steps.check_changes.outputs.has_changes == 'true'
