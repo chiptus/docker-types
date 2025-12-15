@@ -1,6 +1,6 @@
 {
   "name": "docker-types",
-  "version": "1.51.2",
+  "version": "1.51.3",
   "license": "MIT",
   "private": false,
   "type": "module",
