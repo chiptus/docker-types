@@ -1,16 +1,18 @@
 {
   "name": "docker-types",
-  "version": "1.47.1",
+  "version": "1.47.2",
   "license": "MIT",
   "private": false,
   "type": "module",
   "types": "./index.ts",
   "exports": {
     ".": {
-      "types": "./index.ts"
+      "types": "./index.ts",
+      "default": "./index.ts"
     },
     "./generated/*": {
-      "types": "./generated/*/index.ts"
+      "types": "./generated/*/index.ts",
+      "default": "./generated/*/index.ts"
     }
   },
   "files": [
